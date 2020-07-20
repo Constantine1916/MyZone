@@ -1,0 +1,468 @@
+@charset "utf-8";
+
+html,body,ul,li,h1,h2 {
+	margin: 0; /* 手动设置body、h1、ul元素外边距为0 */
+	padding: 0;/* 手动设置body、h1、ul元素内边距为0 */
+} 
+
+ul {
+	list-style: outside none none; /* 使用list-style简写属性 去除 默认的圆形列表项标记 */
+}
+
+#header {
+	width: 100%; /* 元素内容区宽度：采用100%（与父元素保持一致）！ */
+	height: 160px;/* 元素内容区高度：采用70像素 */
+	background-color: #333; /* 元素内盒背景色：采用十六进制颜色单位#333 */
+	min-width: 1263px; /* 为header添加最小宽度值：以保证当窗口无限缩小时，header宽度不能小于1263 */
+	
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果：底部阴影长度1px 阴影模糊度10px 阴影颜色为黑且透明度为30% */
+	position: relative; /* 为header导航栏设置一个绝对点：以提升层次！ */
+	z-index: 9999; /* 设置header层次为最高！ */
+	
+	
+	/*border: 1px solid red;*/
+}
+
+#header .center {
+	width: 100%;
+	height: 80px;
+	color: pink;
+	text-align: center;
+	font: "微软雅黑";
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 80px;
+	
+	
+	/*border: 1px solid red;*/
+}
+
+#header .Header-menu {
+	width: 100%;
+	height: 80px;
+	
+	
+	/*border: 1px solid blue;*/
+}
+
+#header .Header-menu ul {
+	float: right;
+	height: 80px;
+	width: 1820px;
+}
+
+#header .Header-menu li {
+	float: left;/*让ul里的每个li子元素全部左浮动：使li显示在ul盒子里的同一行！*/
+	width: 364px;/* 设置每个li元素的宽度为364ox */
+	text-align: center;/* 先用text-aline属性：设置li元素文本在本元素内容区中水平居中！ */
+	line-height: 80px;/* 再用line-height属性:（让li元素line-height值 等于 父容器ul高度值）设置li在父容器ul中垂直居中 */
+}
+
+a {
+	text-decoration: none;/* 去掉超链接中的下划线 */
+}
+
+#header .Header-menu a {
+	color: #eee;/* 单独设置 对导航栏超链接文本的颜色为淡灰色 */
+	/* background-color: red; *//* 测试性代码：方便查看a元素内盒所在的区域！*/
+	display: block;/* 把行内元素a转换成块级元素：让a元素宽高值可以生效！ */
+}
+
+#header .Header-menu a:hover {
+	background-color: #000;
+}
+
+#T-body {
+	width: 100%;
+	height: 240px;
+	background: white;
+}
+
+#T-body .Container {
+	width: 800px;
+	height: 240px;
+	float: left;
+}
+
+#T-body .HeadPortrait {
+	width: 200px;
+	height: 240px;
+	background: white;
+	background-image: url(../img/HeadPortrait.png);/* 在h1元素中引入一张HeadPortrait图片 */
+	background-size: 200px 240px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;/* 把h1中的文本首行右缩进（即：左移）9999px，实现对元素中文本内容的隐藏！*/
+	float: left; /* 让h1元素在Container盒子里左浮动！ */
+} 
+
+#T-body .Container-one {
+	float: left;
+	width: 560px;
+	height: 240px;
+	background: white;
+	font: "微软雅黑";
+	font-size: 30px;
+}
+
+#T-body .text-one {
+	width: 80px;
+	height: 40px;	
+}
+
+#T-body .Background-zone1 {
+	width: 560px;
+	height: 200px;
+	background-image: url(../img/Background-zone1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#T-body .opt {
+	width: 900px;
+	height: 240px;
+	float: right;
+}
+
+#T-body .opt ul {
+	float: right;
+	width: 900px;
+	height: 240px;
+}
+
+#T-body .opt li {
+	float: left;/*让ul里的每个li子元素全部左浮动：使li显示在ul盒子里的同一行！*/
+	width: 180px;/* 设置每个li元素的宽度为204px */
+	height: 240px;
+	text-align: center;/* 先用text-aline属性：设置li元素文本在本元素内容区中水平居中！ */
+	line-height: 240px;/* 再用line-height属性:（让li元素line-height值 等于 父容器ul高度值）设置li在父容器ul中垂直居中 */
+	font: "微软雅黑";
+	font-size: 30px;
+}
+
+#message {
+	width: 100%;
+	height: 1000px;
+	
+	/*border: 1px solid cadetblue;*/
+}
+
+#message .border1 {
+	border: 3px solid cadetblue;
+	width: 1300px;
+	height: 1550px;
+	margin: 100px 0 0 230px;
+}
+
+#message .messageBoard {
+	margin: 20px 0 0 30px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#message .horizon1 {
+	width: 1220px;
+	margin: 20px 0 0 30px;
+	border: 2px solid cadetblue;
+}
+
+#message .HostMessage {
+	float: left;
+	margin: 20px 0 0 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#message .EditYourMessage {
+	float: left;
+	margin: 20px 0 0 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#message .horizon2 {
+	width: 1220px;
+	margin: 60px 0 0 30px;
+	border: 0.5px solid cadetblue;
+}
+
+#message .HostWords {
+	margin: 20px 0 0 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#message .setting1 {
+	float: left;
+	margin: 180px 0 0 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#message .setting2 {
+	float: left;
+	margin: 180px 0 0 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#message .page {
+	float: left;
+	margin: 180px 0 0 900px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#message .horizon3 {
+	width: 1220px;
+	margin: 220px 0 0 30px;
+	border: 0.5px solid cadetblue;
+}
+
+#message .picture3 {
+	float: left;
+	width: 120px;
+	height: 120px;
+	margin: 20px 0 0 20px;
+	background-image: url(../img/Background-zone-4.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#message .picture3Name {
+	float: left;
+	margin: 29px 0 0 0;
+	font-size: 20px;
+	color: cadetblue;
+}
+
+#message .floor1 {
+	float: left;
+	margin: 29px 0 0 19px;
+	font-size: 10px;
+	color: darkgrey;
+}
+
+#message .quote1 {
+	float: left;
+	margin: 29px 0 0 900px;
+	font-size: 16px;
+	color: cadetblue;
+}
+
+#message .picture4 {
+	float: left;
+	width: 400px;
+	height: 400px;
+	margin: 40px 0 0 30px;
+	background-image: url(../img/Background-zone-5.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#message .date1 {
+	float: left;
+	margin: 380px 0 0 -410px;
+	font-size: 16px;
+	color: darkgrey;
+}
+
+#message .reply-gift1 {
+	float: left;
+	margin: 380px 0 0 -240px;
+	font-size: 17px;
+	color: cadetblue;
+}
+
+#message .horizon4 {
+	width: 1050px;
+	margin: 470px 0 0 200px;
+	border: 0.5px solid cadetblue;
+}
+
+#message .Hostphoto {
+	float: left;
+	width: 80px;
+	height: 60px;
+	margin: 15px 0 0 -440px;
+	background-image: url(../img/HeadPortrait.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#message .Hostreply {
+	float: left;
+	width: 100px;
+	height: 30px;
+	margin: 25px 0 0 -370px;
+	font-size: 18px;
+}
+
+#message .date2 {
+	float: left;
+	margin: 60px 0 0 -370px;
+	font-size: 16px;
+	color: darkgrey;
+}
+
+#message .reply1 {
+	margin: 100px 0 0 -440px;
+	font-size: 16px;
+	width: 800px;
+}
+
+#message .buttonDiv2 {
+	float: left;
+	margin: 150px 0 0 -440px;
+	height: 40px;
+}
+
+#message .yes1 {
+	border: 0px;
+	background-color: lightskyblue;
+	color: white;
+}
+
+#message .no1 {
+	border: 0px;
+	background-color: white;
+	color: darkgrey;
+}
+
+#message .horizon5 {
+	float: left;
+	width: 1220px;
+	margin: 10px 0 0 30px;
+	border: 0.5px solid cadetblue;
+}
+
+#message .picture5 {
+	float: left;
+	width: 120px;
+	height: 120px;
+	margin: 40px 0 0 30px;
+	background-image: url(../img/Background-zone-4.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#message .picture5Name {
+	float: left;
+	margin: 50px 0 0 0;
+	font-size: 20px;
+	color: cadetblue;
+}
+
+#message .floor2 {
+	float: left;
+	margin: 50px 0 0 19px;
+	font-size: 10px;
+	color: darkgrey;
+}
+
+#message .quote2 {
+	float: left;
+	margin: 50px 0 0 900px;
+	font-size: 16px;
+	color: cadetblue;
+}
+
+#message .GarfieldWords {
+	float: left;
+	margin: 30px 0 0 0;
+	font-size: 16px;
+	color: cadetblue;
+}
+
+#message .date3 {
+	float: left;
+	margin: 150px 0 0 -130px;
+	font-size: 16px;
+	color: darkgrey;
+}
+
+#message .reply-gift2 {
+	float: left;
+	margin: 150px 0 0 40px;
+	font-size: 17px;
+	color: cadetblue;
+}
+
+#message .horizon6 {
+	float: left;
+	width: 1050px;
+	margin: 20px 0 0 200px;
+	border: 0.5px solid cadetblue;
+}
+
+#message .reply2 {
+	margin: 210px 0 0 -290px;
+	font-size: 16px;
+	width: 800px;
+}
+
+#message .buttonDiv3 {
+	float: left;
+	margin: 0 0 0 218px;
+	height: 40px;
+}
+
+#message .yes2 {
+	border: 0px;
+	background-color: lightskyblue;
+	color: white;
+}
+
+#message .no2 {
+	border: 0px;
+	background-color: white;
+	color: darkgrey;
+}
+
+#message .horizon7 {
+	width: 1220px;
+	margin: 50px 0 0 30px;
+	border: 2px solid cadetblue;
+}
+
+#message .foot1 {
+	float: left;
+	margin: 20px 0 0 30px;
+	font-size: 18px;
+	color: cadetblue;
+}
+
+#message .foot2 {
+	float: left;
+	margin: 20px 0 0 600px;
+	font-size: 18px;
+	color: cadetblue;
+}
+
+#message .foot3 {
+	float: left;
+	margin: -25px 0 0 1000px;
+	font-size: 18px;
+	color: cadetblue;
+}
+
+#message .foot3input {
+	width: 50px;
+	text-align: center;
+}
+
+#message .buttonDiv4 {
+	margin: 15px 0 0 1140px;
+}
+
+#message .OK1 {
+	border: 0px;
+	width: 70px;
+	height: 25px;
+	background-color: lightskyblue;
+	color: white;
+}
+
+#message .Lengthen {
+	width: 100%;
+	height: 300px;
+}

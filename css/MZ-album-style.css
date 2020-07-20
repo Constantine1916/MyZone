@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+html,body,ul,li,h1,h2 {
+	margin: 0; /* 手动设置body、h1、ul元素外边距为0 */
+	padding: 0;/* 手动设置body、h1、ul元素内边距为0 */
+} 
+
+ul {
+	list-style: outside none none; /* 使用list-style简写属性 去除 默认的圆形列表项标记 */
+}
+
+#header {
+	width: 100%; /* 元素内容区宽度：采用100%（与父元素保持一致）！ */
+	height: 160px;/* 元素内容区高度：采用70像素 */
+	background-color: #333; /* 元素内盒背景色：采用十六进制颜色单位#333 */
+	min-width: 1263px; /* 为header添加最小宽度值：以保证当窗口无限缩小时，header宽度不能小于1263 */
+	
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果：底部阴影长度1px 阴影模糊度10px 阴影颜色为黑且透明度为30% */
+	position: relative; /* 为header导航栏设置一个绝对点：以提升层次！ */
+	z-index: 9999; /* 设置header层次为最高！ */
+	
+	
+	/*border: 1px solid red;*/
+}
+
+#header .center {
+	width: 100%;
+	height: 80px;
+	color: pink;
+	text-align: center;
+	font: "微软雅黑";
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 80px;
+	
+	
+	/*border: 1px solid red;*/
+}
+
+#header .Header-menu {
+	width: 100%;
+	height: 80px;
+	
+	
+	/*border: 1px solid blue;*/
+}
+
+#header .Header-menu ul {
+	float: right;
+	height: 80px;
+	width: 1820px;
+}
+
+#header .Header-menu li {
+	float: left;/*让ul里的每个li子元素全部左浮动：使li显示在ul盒子里的同一行！*/
+	width: 364px;/* 设置每个li元素的宽度为364ox */
+	text-align: center;/* 先用text-aline属性：设置li元素文本在本元素内容区中水平居中！ */
+	line-height: 80px;/* 再用line-height属性:（让li元素line-height值 等于 父容器ul高度值）设置li在父容器ul中垂直居中 */
+}
+
+a {
+	text-decoration: none;/* 去掉超链接中的下划线 */
+}
+
+#header .Header-menu a {
+	color: #eee;/* 单独设置 对导航栏超链接文本的颜色为淡灰色 */
+	/* background-color: red; *//* 测试性代码：方便查看a元素内盒所在的区域！*/
+	display: block;/* 把行内元素a转换成块级元素：让a元素宽高值可以生效！ */
+}
+
+#header .Header-menu a:hover {
+	background-color: #000;
+}
+
+#T-body {
+	width: 100%;
+	height: 240px;
+	background: white;
+}
+
+#T-body .Container {
+	width: 800px;
+	height: 240px;
+	float: left;
+}
+
+#T-body .HeadPortrait {
+	width: 200px;
+	height: 240px;
+	background: white;
+	background-image: url(../img/HeadPortrait.png);/* 在h1元素中引入一张HeadPortrait图片 */
+	background-size: 200px 240px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;/* 把h1中的文本首行右缩进（即：左移）9999px，实现对元素中文本内容的隐藏！*/
+	float: left; /* 让h1元素在Container盒子里左浮动！ */
+} 
+
+#T-body .Container-one {
+	float: left;
+	width: 560px;
+	height: 240px;
+	background: white;
+	font: "微软雅黑";
+	font-size: 30px;
+}
+
+#T-body .text-one {
+	width: 80px;
+	height: 40px;	
+}
+
+#T-body .Background-zone1 {
+	width: 560px;
+	height: 200px;
+	background-image: url(../img/Background-zone1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#T-body .opt {
+	width: 900px;
+	height: 240px;
+	float: right;
+}
+
+#T-body .opt ul {
+	float: right;
+	width: 900px;
+	height: 240px;
+}
+
+#T-body .opt li {
+	float: left;/*让ul里的每个li子元素全部左浮动：使li显示在ul盒子里的同一行！*/
+	width: 180px;/* 设置每个li元素的宽度为204px */
+	height: 240px;
+	text-align: center;/* 先用text-aline属性：设置li元素文本在本元素内容区中水平居中！ */
+	line-height: 240px;/* 再用line-height属性:（让li元素line-height值 等于 父容器ul高度值）设置li在父容器ul中垂直居中 */
+	font: "微软雅黑";
+	font-size: 30px;
+}
+
+#album {
+	width: 100%;
+	height: 600px;
+}
+
+#album .border2 {
+	border: 0px solid cadetblue;
+	width: 1700px;
+	height: 550px;
+	margin: 39px 0 0 48px;
+	background-color: rgb(220,241,245);
+}
+
+#album .head1 {
+	float: left;
+	width: 40px;
+	height: 30px;
+	margin: 30px 0 0 50px;
+	font-size: 20px;
+	color: black;
+	font-weight: 700;
+}
+
+#album .head2 {
+	float: left;
+	width: 40px;
+	height: 30px;
+	margin: 30px 0 0 50px;
+	font-size: 20px;
+	color: black;
+	font-weight: 700;
+}
+
+#album .head3 {
+	float: left;
+	width: 40px;
+	height: 30px;
+	margin: 30px 0 0 50px;
+	font-size: 20px;
+	color: black;
+	font-weight: 700;
+}
+
+#album .head4 {
+	float: left;
+	width: 40px;
+	height: 30px;
+	margin: 30px 0 0 1100px;
+	font-size: 20px;
+	color: black;
+	font-weight: 700;
+}
+
+#album .head5 {
+	float: left;
+	width: 60px;
+	height: 30px;
+	margin: 30px 0 0 50px;
+	font-size: 20px;
+	color: black;
+	font-weight: 700;
+}
+
+#album .head6 {
+	float: left;
+	width: 40px;
+	height: 30px;
+	margin: 30px 0 0 50px;
+	font-size: 20px;
+	color: black;
+	font-weight: 700;
+}
+
+#album .horizon8 {
+	float: left;
+	width: 1600px;
+	margin: 20px 0 0 48px;
+	border: 1.2px solid rgb(119,229,235);
+}
+
+#album .buttonDiv5 {
+	widows: 600px;
+}
+
+#album .uploadPhotos {
+	float: left;
+	width: 170px;
+	height: 50px;
+	margin: 30px 0 0 50px;
+	font-size: 20px;
+	color: white;
+	background-color: rgb(92,207,230);
+	border: 0px;
+}
+
+#album .uploadVideo {
+	float: left;
+	width: 170px;
+	height: 50px;
+	margin: 30px 0 0 20px;
+	font-size: 20px;
+	color: white;
+	background-color: rgb(92,207,230);
+	border: 0px;
+}
+
+#album .createAlbum {
+	float: left;
+	width: 110px;
+	height: 45px;
+	margin: 32.5px 0 0 20px;
+	font-size: 20px;
+	color: black;
+	background-color: rgb(242,253,255);
+	border: 0px;
+}
+
+#album .showSetting {
+	float: left;
+	width: 110px;
+	height: 45px;
+	margin: 32.5px 0 0 20px;
+	font-size: 20px;
+	color: black;
+	background-color: rgb(242,253,255);
+	border: 0px;
+}
+
+#album .picture6 {
+	float: left;
+	background-image: url(../img/Background-zone-6.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 200px;
+	height: 240px;
+	margin: 160px 0 0 -620px;
+}
+
+#album .picture7 {
+	float: left;
+	background-image: url(../img/Background-zone-7.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 500px;
+	height: 80px;
+	margin: -380px 0 0 1160px;
+}
